@@ -1,0 +1,371 @@
+/* App.css */
+
+.add-question-container {
+  margin: 20px auto; /* Center the container */
+  max-width: 500px; /* Limit the width */
+}
+
+.top-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-container,
+.options-container,
+.correct-answer-container {
+  margin-bottom: 20px; /* Add space under each section */
+}
+
+.question-input,
+.option-input,
+.correct-answer-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-input {
+  width: 48%; /* Two options per row */
+  margin-right: 10px; /* Add space between options */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-question-button,
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-question-button:hover,
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-label {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.correct-answer-label {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.qustion {
+  margin-bottom: 20px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+/* Quizz details */
+
+.quiz-details-outer-container {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Adjusted height */
+  width: 30%; /* Adjusted width */
+  margin: 0 auto; /* Center horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.quiz-details-container {
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.quiz-details-heading {
+  text-align: center;
+  color: #333;
+  font-size: 24px; /* Increased font size */
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 10px; /* Increased margin */
+  color: #555;
+  font-size: 16px; /* Increased font size */
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Increased font size */
+}
+
+.continue-button {
+  display: block;
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* Increased font size */
+  margin-left: 12px;
+}
+
+.continue-button:hover {
+  background-color: #0056b3;
+}
+
+/* Game Page */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.white-container {
+  width: 22%;
+  height: 20vh;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0.4, 0.4, 0.4, 0.4);
+  height: 20vh;
+  border: 1px solid transparent; /* Transparent border */
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.game-pin-input {
+  position: relative;
+  top: 30px;
+  left: 140px;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.enter-button {
+  position: relative;
+  top: 30px;
+  left: 140px;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 76%;
+  padding: 10px;
+  background-color: #0f6733; /* Dark green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+  background-color: #0f522b; /* Even darker shade of green on hover */
+}
+
+.create-quizz-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0f6733; /* Dark green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove default link underline */
+}
+
+.create-quizz-button:hover {
+  background-color: #0f522b; /* Even darker shade of green on hover */
+}
+
+/*  Back Ground*/
+
+.background {
+  background-image: url("/back.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Questions */
+
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+.question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.answer {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-card {
+  position: relative;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Edit Question */
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card div {
+  margin-bottom: 10px;
+}
+
+.card label {
+  display: block;
+  font-weight: bold;
+}
+
+.card input[type="text"],
+.card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
