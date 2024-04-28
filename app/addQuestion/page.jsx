@@ -1,11 +1,14 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-
+import Link from "next/link";
 function AddQuestion() {
   const [question, setQuestion] = useState("");
   const [options, setOptions] = useState(["", "", "", ""]);
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [quizData, setQuizData] = useState([]);
+  const [visible, setVisible] = useState();
+  const router = useRouter();
 
   const handleOptionChange = (index, value) => {
     const updatedOptions = [...options];
@@ -26,7 +29,10 @@ function AddQuestion() {
   };
 
   const handleSubmission = () => {
-    console.log("Quiz Data:", quizData);
+    const query = quizData
+      .map((obj) => `data=${encodeURIComponent(JSON.stringify(obj))}`)
+      .join("&");
+    router.push(`/question?${query}`);
   };
 
   return (
@@ -93,9 +99,16 @@ function AddQuestion() {
         <button onClick={handleAddQuestion} className="add-question-button">
           Add Question
         </button>
-        <button onClick={handleSubmission} className="submit-button">
-          Submit
-        </button>
+        <Link
+          href={{
+            pathname: "/question",
+            query: { data: JSON.stringify(quizData) },
+          }}
+        >
+          <button onClick={() => {}} className="submit-button">
+            Submit
+          </button>
+        </Link>
       </div>
     </div>
   );
